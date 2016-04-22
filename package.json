@@ -1,0 +1,26 @@
+{
+  "name": "node-prompt",
+  "version": "1.0.0",
+  "description": "Using prompt module in node.js",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ivandevp/node-prompt.git"
+  },
+  "keywords": [
+    "node",
+    "prompt"
+  ],
+  "author": "Ivan Medina <medinadiazivan@gmail.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ivandevp/node-prompt/issues"
+  },
+  "homepage": "https://github.com/ivandevp/node-prompt#readme",
+  "dependencies": {
+    "prompt": "^1.0.0"
+  }
+}
