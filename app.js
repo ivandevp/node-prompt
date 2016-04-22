@@ -21,7 +21,7 @@ var arreglo = getInputArray(ARRAY_PREFIX, ARRAY_LENGTH)
 prompt.get(arreglo, function (err, result) {
   var suma = 0
   for (var i = 0; i < ARRAY_LENGTH; i++) {
-    suma += result[ARRAY_PREFIX + i]
+    suma += parseInt(result[ARRAY_PREFIX + i])
   }
   console.log("Sum: " + suma)
 })
