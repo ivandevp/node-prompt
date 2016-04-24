@@ -5,9 +5,9 @@ const generator = require('./array-generator')
 
 prompt.start()
 
-// Change quantity of input
+// Cambiar la cantidad de elementos que contendrá el arreglo
 const ARRAY_LENGTH = 10
-// Change array element's prefix
+// Indicar el prefijo de las variables de entrada generadas en el arreglo
 const ARRAY_PREFIX = "numero"
 
 const arreglo = generator(ARRAY_PREFIX, ARRAY_LENGTH)
