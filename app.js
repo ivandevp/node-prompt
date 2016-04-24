@@ -1,27 +1,27 @@
-var prompt = require('prompt')
+'use strict'
+
+const prompt = require('prompt')
+const generator = require('./array-generator')
+
 prompt.start()
 
-function getInputArray(var_name, length) {
-	var i = 0
-	var arreglo = []
-	while (i < 10) {
-		arreglo.push(var_name + i)
-		i++
-	}
-	return arreglo
-}
-
 // Change quantity of input
-var ARRAY_LENGTH = 10
+const ARRAY_LENGTH = 10
 // Change array element's prefix
-var ARRAY_PREFIX = "numero"
+const ARRAY_PREFIX = "numero"
 
-var arreglo = getInputArray(ARRAY_PREFIX, ARRAY_LENGTH)
+const arreglo = generator(ARRAY_PREFIX, ARRAY_LENGTH)
+
+/*
+ * Ejemplo de uso: 
+ * Calcular el promedio de los números ingresados mediante terminal
+ */
 
 prompt.get(arreglo, function (err, result) {
-  var suma = 0
-  for (var i = 0; i < ARRAY_LENGTH; i++) {
-    suma += parseInt(result[ARRAY_PREFIX + i])
+  let suma = 0
+  for (let i = 0; i < ARRAY_LENGTH; i++) {
+    suma += parseInt(result[ARRAY_PREFIX + (i+1)])
   }
-  console.log("Sum: " + suma)
+  let promedio = suma/ARRAY_LENGTH
+  console.log("Promedio: " + promedio)
 })
