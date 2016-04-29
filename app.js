@@ -5,23 +5,23 @@ const generator = require('./array-generator')
 
 prompt.start()
 
-// Cambiar la cantidad de elementos que contendrá el arreglo
+// Change array length in order to generate desired inputs
 const ARRAY_LENGTH = 10
-// Indicar el prefijo de las variables de entrada generadas en el arreglo
-const ARRAY_PREFIX = "numero"
+// Set prefix of variable in prompt
+const ARRAY_PREFIX = "age"
 
-const arreglo = generator(ARRAY_PREFIX, ARRAY_LENGTH)
+const array = generator(ARRAY_PREFIX, ARRAY_LENGTH)
 
 /*
- * Ejemplo de uso: 
- * Calcular el promedio de los números ingresados mediante terminal
+ * e.g.: 
+ * Get the average age from inputs
  */
 
-prompt.get(arreglo, function (err, result) {
-  let suma = 0
+prompt.get(array, function (err, result) {
+  let sum = 0
   for (let i = 0; i < ARRAY_LENGTH; i++) {
-    suma += parseInt(result[ARRAY_PREFIX + (i+1)])
+    sum += parseInt(result[ARRAY_PREFIX + (i+1)])
   }
-  let promedio = suma/ARRAY_LENGTH
-  console.log("Promedio: " + promedio)
+  let average = sum/ARRAY_LENGTH
+  console.log("Average age: " + average)
 })
